@@ -11,6 +11,11 @@ export class SidebarComponent {
 
   hist = this.gifsService.historial;
 
+  search(args: any): void {
+    console.log(args);
+    this.gifsService.searchGifs(args);
+  }
+
   get historial(): string[] {
     return this.gifsService.historial;
   }

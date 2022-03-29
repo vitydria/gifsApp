@@ -13,8 +13,7 @@ export class SearchComponent {
 
   search(): void {
     const value = this.inputSearch.nativeElement.value;
-    if (!this.gifsService.historial.includes(value) && value.trim().length)
-      this.gifsService.searchGifs(value);
+    if (value.trim().length) this.gifsService.searchGifs(value);
     this.inputSearch.nativeElement.value = '';
   }
 }
